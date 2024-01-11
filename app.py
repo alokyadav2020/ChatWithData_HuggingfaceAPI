@@ -34,7 +34,7 @@ PROMPT=PromptTemplate(template=prompt_template, input_variables=["context", "que
 
 chain_type_kwargs={"prompt": PROMPT}
 
-llm = HuggingFaceHub(repo_id="mistralai/Mixtral-8x7B-Instruct-v0.1",model_kwargs={"temperature":0.6,"max_length":200})
+llm = HuggingFaceHub(repo_id="mistralai/Mixtral-8x7B-Instruct-v0.1")#,model_kwargs={"temperature":0.8,"max_length":100}
 
 qa=RetrievalQA.from_chain_type(
     llm=llm, 
